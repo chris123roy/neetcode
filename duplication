@@ -1,0 +1,25 @@
+
+import java.util.*;
+public class cd {
+
+    public static void main(String[] args) {
+        int [] num={12,1,2,3};
+        if(dup(num))
+        System.out.println("duplication exists");
+        if(!(dup(num)))
+        System.out.println("no duplication exists");
+    }
+
+    public static boolean dup(int []n)
+    {
+        Set<Integer> uni=new HashSet<>();
+        for(int i=0;i<n.length;i++) {
+            if (uni.contains(n[i])) {
+                return true;
+            }
+            uni.add(n[i]);
+
+        }
+        return false;
+    }
+}
